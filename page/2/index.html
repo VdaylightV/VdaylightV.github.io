@@ -145,104 +145,10 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/31/Dijkstra-s-Algorithm-%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/31/Dijkstra-s-Algorithm-%E7%8B%84%E5%85%8B%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Dijkstra's Algorithm:狄克斯特拉算法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-08-31 19:50:37 / Modified: 19:51:50" itemprop="dateCreated datePublished" datetime="2020-08-31T19:50:37+08:00">2020-08-31</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Dijkstra’s-Algorithm-狄克斯特拉算法"><a href="#Dijkstra’s-Algorithm-狄克斯特拉算法" class="headerlink" title="#Dijkstra’s Algorithm:狄克斯特拉算法"></a>#Dijkstra’s Algorithm:狄克斯特拉算法</h1><h4 id="加权图"><a href="#加权图" class="headerlink" title="加权图"></a>加权图</h4><ul>
-<li>对于每一条边都有一个对应的数字的图称为加权图。</li>
-<li>每一条边对应的数字称为权重。</li>
-<li>计算非加权图的最短路径可使用广度优先搜索，对于加权图的最短路径，应使用狄克斯特拉算法</li>
-</ul>
-<h4 id="环"><a href="#环" class="headerlink" title="环"></a>环</h4><ul>
-<li>在有向图中，两个节点相互指向则会成环，相当于无向图中两个节点的连接（<strong>无向图意味着两个节点互相指向对方，其实就是环</strong>）。</li>
-<li>在有向图的路径中，若包含环则会导致路径增加，因最短路径。</li>
-<li>狄克斯特拉算法仅适用于<strong>有向无环图（Direct Acyclic Graph， DAG）</strong></li>
-<li>对于存在<strong>负权边</strong>的图，狄克斯特拉算法也不适用，应选用<strong>贝尔曼-福德算法（Bellman-Ford Algorithm）</strong>。</li>
-</ul>
-<h4 id="狄克斯特拉算法"><a href="#狄克斯特拉算法" class="headerlink" title="狄克斯特拉算法"></a>狄克斯特拉算法</h4><h5 id="算法思想："><a href="#算法思想：" class="headerlink" title="算法思想："></a>算法思想：</h5><ol>
-<li>找出最便宜的节点，即在最短时间内前往的节点。</li>
-<li>对于该节点的邻居节点，检查是否有前往他们的更短路径，若有，就更新其开销</li>
-<li>重复上述过程，对图中的每一个节点都执行上述操作</li>
-<li>回溯，计算最终路径</li>
-</ol>
-<p><u><strong>找到途中最便宜的节点，并确保没有到该节点更便宜的路径。</strong></u></p>
-<h5 id="需要的数据结构"><a href="#需要的数据结构" class="headerlink" title="需要的数据结构"></a>需要的数据结构</h5><ul>
-<li><strong>图的表示（Graph）——散列表</strong>：包含每一条边的权值</li>
-<li><strong>已有开销（Costs）——散列表</strong>：从初始节点开始，未知开销均初始化为$+\infin$</li>
-<li><strong>父节点（Parents）——散列表</strong>：用于记录路径，便于回溯追踪起点到终点的路径</li>
-<li><strong>已探索集（Closed）——数组</strong>：用于记录已探索过的，即已找到最便宜路径的节点</li>
-</ul>
-<h5 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_lowest_cost_node</span>(<span class="params">costs</span>):</span></span><br><span class="line">    lowest_cost = float(<span class="string">&quot;inf&quot;</span>)</span><br><span class="line">    lowest_cost_node = <span class="literal">None</span></span><br><span class="line">    <span class="keyword">for</span> node <span class="keyword">in</span> costs:</span><br><span class="line">        cost = costs[node]</span><br><span class="line">        <span class="keyword">if</span> cost &lt; lowest_cost:</span><br><span class="line">            lowest_cost = cost</span><br><span class="line">            lowest_cost_node = node</span><br><span class="line">    <span class="keyword">return</span> lowest_cost_node</span><br><span class="line"></span><br><span class="line">node = find_lowest_cost_node(costs)</span><br><span class="line"><span class="keyword">while</span> node <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">    cost = costs[node]</span><br><span class="line">    neighbors = graph[node]</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> neighbors.keys():</span><br><span class="line">        new_cost = cost + neighbors[n]</span><br><span class="line">        <span class="keyword">if</span> costs[n] &gt; new_cost:</span><br><span class="line">            costs[n] = new_cost</span><br><span class="line">            parents[n] = node</span><br><span class="line">    processed.append(node)</span><br><span class="line">    node = find_lowest_cost_node(costs)</span><br></pre></td></tr></table></figure>
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/31/Class3-Getting-to-Know-CSS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -400,7 +306,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -601,7 +507,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/29/about/index/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -671,7 +577,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/29/Breadth-first-Search-%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -785,7 +691,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/29/Hash-Table-%E6%95%A3%E5%88%97%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -942,7 +848,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/29/Class1-Building-Your-First-Web-Page/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -1063,7 +969,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/04/The-things-haunted-with-me/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -1131,7 +1037,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/30/OS-C1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -1222,7 +1128,7 @@
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/07/29/about/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/Tou.png">
       <meta itemprop="name" content="John Doe">
       <meta itemprop="description" content="">
     </span>
@@ -1261,6 +1167,83 @@
           <p>I am a student majoring in Artificial Intelligence and Neuroscience. </p>
 <p>To reflect on myself, record the knowledge and express the fragmented thoughts im my mind, I created this webseit and maintain it.</p>
 <p>I hope one day I can become more adult, take on more responsibility and be equiped with the skills and competence to become the kind of person I am pursuing and live the life I wish for! Moreover, I hope one day I will meet the princess in my life!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/06/11/%E5%8E%9F%E6%AF%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Tou.png">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/06/11/%E5%8E%9F%E6%AF%81/" class="post-title-link" itemprop="url">原毁</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-06-11 19:26:05 / Modified: 19:41:57" itemprop="dateCreated datePublished" datetime="2020-06-11T19:26:05+08:00">2020-06-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%98%85%E8%AF%BB/" itemprop="url" rel="index"><span itemprop="name">阅读</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="韩愈《原毁》摘录"><a href="#韩愈《原毁》摘录" class="headerlink" title="韩愈《原毁》摘录"></a>韩愈《原毁》摘录</h4><ul>
+<li>古之君子，其责人也重以周，其待人也轻以约。重以周，故不怠，轻以约，故人乐为善。</li>
+<li>取其一，不责其二；即其新，不究其旧。</li>
+<li><strong>外以欺于人，内以欺于心，未少有得而止矣。</strong></li>
+<li>举其一，不计其十；究其旧，不图其新：恐恐然惟惧其人之有闻也。</li>
+<li>夫是之谓<strong>不以众人待其身，而以圣人望于人</strong>，吾未见其尊己也。</li>
+<li><strong>怠者不能修，而忌者畏人修。</strong></li>
+<li><strong>事修而谤兴，德高而毁来。</strong></li>
+<li>士之处此世，而望名誉之光，道德之行，难已。</li>
+</ul>
 
       
     </div>
@@ -1337,6 +1320,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="John Doe"
+      src="/images/Tou.png">
   <p class="site-author-name" itemprop="name">John Doe</p>
   <div class="site-description" itemprop="description"></div>
 </div>
@@ -1345,7 +1330,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -1361,6 +1346,9 @@
       </div>
   </nav>
 </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
 
 
 
