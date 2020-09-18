@@ -243,7 +243,6 @@
 <li><strong>代码</strong>：</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> states_needed:</span><br><span class="line">    best_station = <span class="literal">None</span></span><br><span class="line">    best_states_covered = set()</span><br><span class="line">    <span class="keyword">for</span> station, states_covered <span class="keyword">in</span> stations.items():</span><br><span class="line">        covered = states_covered &amp; states_needed</span><br><span class="line">        <span class="keyword">if</span> len(covered) &gt; len(best_states_covered):</span><br><span class="line">            best_station = station</span><br><span class="line">            best_station_covered = covered</span><br><span class="line"></span><br><span class="line">    states_needed -= best_states_covered</span><br><span class="line">    final_states.add(best_station)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
 <h4 id="旅行商问题"><a href="#旅行商问题" class="headerlink" title="旅行商问题"></a>旅行商问题</h4><ul>
 <li><p><strong>问题描述</strong>：一个旅行商要前往几个城市，同时要确保时间最短，如何规划行程。</p>
 </li>
@@ -255,8 +254,7 @@
 </li>
 <li><p><strong>其他补充说明</strong>：</p>
 </li>
-<li><p>对于同一城市之间的往返，其花费时间可能不同。</p>
-<ul>
+<li>对于同一城市之间的往返，其花费时间可能不同。<ul>
 <li>对于图算法中的最短路径算法，若指定需要经过某几个节点也便转化成了旅行商问题。</li>
 </ul>
 </li>
@@ -472,6 +470,8 @@
 
 
 
+
+  
 
   
 

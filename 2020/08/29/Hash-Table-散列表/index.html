@@ -236,7 +236,6 @@
 </li>
 </ul>
 <h4 id="Python中的散列表实现"><a href="#Python中的散列表实现" class="headerlink" title="Python中的散列表实现"></a>Python中的散列表实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hashtable1 = dict（）</span><br><span class="line">hashtable2 = &#123;&#125;</span><br><span class="line">hashtable1[<span class="string">&quot;First Name&quot;</span>] = <span class="string">&quot;Chen&quot;</span></span><br><span class="line">hashtable2[<span class="string">&quot;Last Name&quot;</span>] = <span class="string">&quot;Nector&quot;</span></span><br></pre></td></tr></table></figure>
-
 <h4 id="散列表的应用"><a href="#散列表的应用" class="headerlink" title="散列表的应用"></a>散列表的应用</h4><ul>
 <li><p>创建映射&amp;查找</p>
 </li>
@@ -258,7 +257,8 @@
 </ul>
 </li>
 </ul>
-<h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><table>
+<h4 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h4><div class="table-container">
+<table>
 <thead>
 <tr>
 <th></th>
@@ -268,7 +268,8 @@
 <th>链表</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>查找</td>
 <td>O(1)</td>
 <td>O(n)</td>
@@ -289,7 +290,9 @@
 <td>O(n)</td>
 <td>O(1)</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li><strong>评价</strong>：平均情况下，散列表兼具数组和链表的优点，但这要求两点：<ul>
 <li><ol>
@@ -303,11 +306,11 @@
 <h4 id="填装因子"><a href="#填装因子" class="headerlink" title="填装因子"></a>填装因子</h4><ul>
 <li><strong>定义</strong>：散列表中包含的元素数 / 位置总数</li>
 <li><strong>影响</strong>：当装填因子增大时，散列表中的元素可能不再均匀分布，这时需要调整散列表的长度（Resize）——创建一个长为原数组两倍的数组，使用散列函数将所有元素插入到新的散列表中。</li>
-<li>**<u>经验</u>**：当装填因子&gt;0.7时，便需要跳针散列表的长度</li>
+<li><strong><u>经验</u></strong>：当装填因子&gt;0.7时，便需要跳针散列表的长度</li>
 </ul>
 <h4 id="良好的散列函数"><a href="#良好的散列函数" class="headerlink" title="良好的散列函数"></a>良好的散列函数</h4><ul>
 <li><strong>影响</strong>：良好的散列函数时数组中的值均匀分布而非大量冲突</li>
-<li>**<u>例子</u>**：SHA函数</li>
+<li><strong><u>例子</u></strong>：SHA函数</li>
 </ul>
 
     </div>
@@ -506,6 +509,8 @@
 
 
 
+
+  
 
   
 

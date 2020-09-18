@@ -232,7 +232,6 @@
 <li>Generally, the selectors appears later will overwrite the former ones. Here are some examples:</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&#x27;&#x27;Example 1&#x27;&#x27;&#x27;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;Example 2&#x27;&#x27;&#x27;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;In the examples above, the background green will overwrite the orange&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
 <h4 id="Calculating-Specificity"><a href="#Calculating-Specificity" class="headerlink" title="Calculating Specificity"></a>Calculating Specificity</h4><ul>
 <li><p>Different types of selectors has different specificity weights:</p>
 <p><code>ID selector</code> &gt; <code>class selector</code> &gt; <code>type selector</code></p>
@@ -242,16 +241,12 @@
 </li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;food&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#food</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: orange;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;The background color will be green&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
 <h4 id="Combining-Selectors"><a href="#Combining-Selectors" class="headerlink" title="Combining Selectors"></a>Combining Selectors</h4><ul>
 <li>We can combine different types of selectors together to select specific elements. For example:</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;hotdog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;mustard&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.hotdog</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: brown;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.hotdog</span> <span class="selector-tag">p</span><span class="selector-class">.mustard</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: yellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>The selector the closest to the <code>&#123;</code> is the key selector while the selectors before it are prequalifiers.</li>
 <li>To calculate the specificity of combined selectors, we just add each members’ specificity weights in each bits. For example, the <code>.hotdog p</code>: <code>0-1-0 + 0-0-1 = 0-1-1</code></li>
@@ -263,34 +258,29 @@
 <li>The elements in HTML can has more than one class attribute which are separated with space, by which we can place certain styles all elements and overwrite some of them. Here is the examples:</li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-danger&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-success&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.btn</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-danger</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.btn-success</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <h3 id="Common-CSS-Property-Values"><a href="#Common-CSS-Property-Values" class="headerlink" title="Common CSS Property Values"></a>Common CSS Property Values</h3><h4 id="Four-ways-to-represent-colors"><a href="#Four-ways-to-represent-colors" class="headerlink" title="Four ways to represent colors:"></a>Four ways to represent colors:</h4><img src="/2020/08/31/Class3-Getting-to-Know-CSS/color.png" class="">
-
 <h4 id="Hexadecimal-Colors"><a href="#Hexadecimal-Colors" class="headerlink" title="Hexadecimal Colors"></a>Hexadecimal Colors</h4><ul>
 <li>We use six bit of hexadecimal digit to represent the color, the first two bits stand for the red channel, the last two bits stand for blue channel and the middle two bits stand for green channel.</li>
 <li>If the two bits are the same in the same channel, we can just use three bits of hexadecimal digit to represent them.</li>
 </ul>
 <img src="/2020/08/31/Class3-Getting-to-Know-CSS/hex.png" class="">
-
 <h4 id="RGB-amp-RGBa-Colors"><a href="#RGB-amp-RGBa-Colors" class="headerlink" title="RGB &amp; RGBa Colors"></a>RGB &amp; RGBa Colors</h4><ul>
 <li>In RGB Colors, we just rewrite the representation of the color to the following format: <code>rgb(###, ###, ###)</code>, where <code>###</code> stands for a number between <code>0~255</code>.</li>
 <li>In RGBa Colors, we add an fourth value $\alpha$, whose number is between <code>0-1</code>, which stands for the transparency of the color.</li>
 </ul>
 <h4 id="HSL-amp-HSLa-Colors"><a href="#HSL-amp-HSLa-Colors" class="headerlink" title="HSL &amp; HSLa Colors"></a>HSL &amp; HSLa Colors</h4><ul>
-<li>In HSL Colors, we still have three values. However, the first one –<strong>hue</strong>, is between <code>0-360</code>, which identifies the degree of a color on the color wheel. The second one–<strong>saturation</strong> is between <code>0~100%</code>, which identifies how saturated with color the hue is. The third one–<strong>lightness</strong>, identifies how dark or light the hue value is, which is between <code>0~100%</code> with <code>0</code> stands for completely black and <code>100%</code> stands for completely white. The format is this: <code>hsl(###, ###, ###)</code></li>
+<li>In HSL Colors, we still have three values. However, the first one —<strong>hue</strong>, is between <code>0-360</code>, which identifies the degree of a color on the color wheel. The second one—<strong>saturation</strong> is between <code>0~100%</code>, which identifies how saturated with color the hue is. The third one—<strong>lightness</strong>, identifies how dark or light the hue value is, which is between <code>0~100%</code> with <code>0</code> stands for completely black and <code>100%</code> stands for completely white. The format is this: <code>hsl(###, ###, ###)</code></li>
 <li>In HSLa Colors, we just add a fourth value which stands for the transparency of the color.</li>
 </ul>
 <h4 id="The-ways-to-represent-length"><a href="#The-ways-to-represent-length" class="headerlink" title="The ways to represent length"></a>The ways to represent length</h4><ul>
-<li>There are two different ways to represent length in page or website—-Absolute Length &amp; Relative Length</li>
+<li>There are two different ways to represent length in page or website——Absolute Length &amp; Relative Length</li>
 </ul>
 <h4 id="Absolute-Lengths"><a href="#Absolute-Lengths" class="headerlink" title="Absolute Lengths"></a>Absolute Lengths</h4><ul>
 <li>The simplest length representation. The length are fixed to a physical measurement</li>
 <li>Pixel is the most common one, which is noted as <code>px</code>.</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>This kind of representation lacks flexibility among different display devices.</li>
 </ul>
@@ -301,7 +291,6 @@
 <li>The length of the element is determined by their parent element.</li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.col</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;The length of the element is determined by its parent element&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>This representation is very helpful in designing a web page’s layout.</li>
 </ul>
@@ -309,7 +298,6 @@
 <li>The length is calculated by comparison of the font size.</li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.banner</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">5em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>This is very useful in designing a textbox.</li>
 </ul>
@@ -510,6 +498,8 @@
 
 
 
+
+  
 
   
 

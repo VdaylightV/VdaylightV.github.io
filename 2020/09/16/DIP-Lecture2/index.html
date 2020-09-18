@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="数字图像处理（第二讲：数字图像基础）视觉感知要素人眼结构   虹膜：控制进入眼的光量 视网膜：物体在视网膜上成像 晶状体：光线通过晶状体进入眼睛，晶状体可调节焦距 **中央凹(concavity)**：视网膜上对颜色&#x2F;细节敏感的区域  特点 成像焦距：14-17mm  亮度适应：      人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广  人眼可以同时分">
+  <meta name="description" content="数字图像处理（第二讲：数字图像基础）视觉感知要素人眼结构  虹膜：控制进入眼的光量 视网膜：物体在视网膜上成像 晶状体：光线通过晶状体进入眼睛，晶状体可调节焦距 中央凹(concavity)：视网膜上对颜色&#x2F;细节敏感的区域  特点 成像焦距：14-17mm  亮度适应：     人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广 人眼可以同时分辨的强度范围有">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DIP_Lecture2">
 <meta property="og:url" content="http://example.com/2020/09/16/DIP-Lecture2/index.html">
 <meta property="og:site_name" content="Psyche Zone">
-<meta property="og:description" content="数字图像处理（第二讲：数字图像基础）视觉感知要素人眼结构   虹膜：控制进入眼的光量 视网膜：物体在视网膜上成像 晶状体：光线通过晶状体进入眼睛，晶状体可调节焦距 **中央凹(concavity)**：视网膜上对颜色&#x2F;细节敏感的区域  特点 成像焦距：14-17mm  亮度适应：      人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广  人眼可以同时分">
+<meta property="og:description" content="数字图像处理（第二讲：数字图像基础）视觉感知要素人眼结构  虹膜：控制进入眼的光量 视网膜：物体在视网膜上成像 晶状体：光线通过晶状体进入眼睛，晶状体可调节焦距 中央凹(concavity)：视网膜上对颜色&#x2F;细节敏感的区域  特点 成像焦距：14-17mm  亮度适应：     人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广 人眼可以同时分辨的强度范围有">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/2020/09/16/DIP-Lecture2/eyeball.png">
 <meta property="og:image" content="http://example.com/2020/09/16/DIP-Lecture2/range.png">
@@ -233,12 +233,11 @@
 
       
         <h1 id="数字图像处理（第二讲：数字图像基础）"><a href="#数字图像处理（第二讲：数字图像基础）" class="headerlink" title="数字图像处理（第二讲：数字图像基础）"></a>数字图像处理（第二讲：数字图像基础）</h1><h2 id="视觉感知要素"><a href="#视觉感知要素" class="headerlink" title="视觉感知要素"></a>视觉感知要素</h2><h3 id="人眼"><a href="#人眼" class="headerlink" title="人眼"></a>人眼</h3><h4 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h4><img src="/2020/09/16/DIP-Lecture2/eyeball.png" class="">
-
 <ul>
 <li><strong>虹膜</strong>：控制进入眼的光量</li>
 <li><strong>视网膜</strong>：物体在视网膜上成像</li>
 <li><strong>晶状体</strong>：光线通过晶状体进入眼睛，晶状体可调节焦距</li>
-<li>**中央凹(concavity)**：视网膜上对颜色/细节敏感的区域</li>
+<li><strong>中央凹(concavity)</strong>：视网膜上对颜色/细节敏感的区域</li>
 </ul>
 <h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ul>
 <li><p><strong>成像焦距</strong>：14-17mm</p>
@@ -247,16 +246,13 @@
 </li>
 </ul>
 <img src="/2020/09/16/DIP-Lecture2/range.png" class="">
-
 <ul>
-<li><p>人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广</p>
-</li>
+<li>人眼可感知的光强度范围很广——暗视觉和亮视觉两种不同感知细胞的感光范围所构成的感光范围很广</li>
 <li><p>人眼可以同时分辨的强度范围有限——给定条件下，仅有一定的感知范围，超出的部分是无法区分颜色的</p>
 <h4 id="人眼的错觉和欺骗性"><a href="#人眼的错觉和欺骗性" class="headerlink" title="人眼的错觉和欺骗性"></a>人眼的错觉和欺骗性</h4></li>
 <li><p><strong>马赫带效应</strong>：亮度条带交界处发生灰度的上冲和下冲</p>
 </li>
-<li><p><strong>与不同亮度对比</strong>：与不同亮度对比后，人眼对同一亮度的感知有所不同</p>
-</li>
+<li><strong>与不同亮度对比</strong>：与不同亮度对比后，人眼对同一亮度的感知有所不同</li>
 <li><p><strong>视错觉</strong>：平行，长短</p>
 <h2 id="光和电磁波谱"><a href="#光和电磁波谱" class="headerlink" title="光和电磁波谱"></a>光和电磁波谱</h2><h3 id="电磁波谱"><a href="#电磁波谱" class="headerlink" title="电磁波谱"></a>电磁波谱</h3></li>
 <li><p>$波长\lambda = \frac{光速c}{频率\nu}$</p>
@@ -269,8 +265,7 @@
 <h4 id="单色光："><a href="#单色光：" class="headerlink" title="单色光："></a>单色光：</h4></li>
 <li><p>没有颜色的光</p>
 </li>
-<li><p>唯一属性：强度</p>
-</li>
+<li>唯一属性：强度</li>
 <li><p>对单色光的感知：黑色（最暗）、灰色、白色（最亮）</p>
 </li>
 <li><p>灰度：表示强度的数值</p>
@@ -279,10 +274,8 @@
 <h4 id="彩色光："><a href="#彩色光：" class="headerlink" title="彩色光："></a>彩色光：</h4></li>
 <li><p>范围：0.43-0.79mm的电磁波</p>
 </li>
-<li><p>辐射（radiance）：能量（瓦特）</p>
-</li>
-<li><p>光强（luminance）：感知的能量（流明）</p>
-</li>
+<li>辐射（radiance）：能量（瓦特）</li>
+<li>光强（luminance）：感知的能量（流明）</li>
 <li><p>亮度（brightness）：主观描绘</p>
 </li>
 <li><p><strong>观测精度</strong>:波长需要小于物体尺寸才可观察</p>
@@ -296,12 +289,10 @@
 <li>阵列传感器：数码相机、摄像机</li>
 </ul>
 <h4 id="图像形成模型"><a href="#图像形成模型" class="headerlink" title="图像形成模型"></a>图像形成模型</h4></li>
-<li><p>二维函数$f(x,y)=i(x,y)r(x,y):0&lt;f(x,y)&lt;\infin$</p>
+<li><p>二维函数$f(x,y)=i(x,y)r(x,y):0\&lt;f(x,y)&lt;\infin$</p>
 </li>
-<li><p>入射分量：$0&lt;i(x,y)&lt;\infin$——表征入射光强度</p>
-</li>
-<li><p>反射分量：$0&lt;r(x,y)&lt;1$——表征反射率</p>
-</li>
+<li>入射分量：$0\&lt;i(x,y)&lt;\infin$——表征入射光强度</li>
+<li>反射分量：$0\&lt;r(x,y)&lt;1$——表征反射率</li>
 <li><p>投射系数：表征光穿透物体的程度</p>
 <h4 id="灰度范围"><a href="#灰度范围" class="headerlink" title="灰度范围"></a>灰度范围</h4></li>
 <li><p>单色图像的灰度值：$L_{min} \le l \le L_{max}$</p>
@@ -407,7 +398,6 @@
 </li>
 </ul>
 <img src="/2020/09/16/DIP-Lecture2/Prefer.png" class="">
-
 <h3 id="最佳量化"><a href="#最佳量化" class="headerlink" title="最佳量化"></a>最佳量化</h3><h4 id="最佳量化-1"><a href="#最佳量化-1" class="headerlink" title="最佳量化"></a>最佳量化</h4><ul>
 <li><p>使量化误差最小的量化方法</p>
 <ul>
@@ -421,14 +411,15 @@
 <li>$Z$的取值范围为$[H_1,H_2]$, 量化层数为$K$</li>
 <li>均方误差</li>
 </ul>
-<p>$$<br>\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q_k)^2p(Z)d(Z)<br>$$</p>
-<blockquote>
+<script type="math/tex; mode=display">
+\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q_k)^2p(Z)d(Z)</script><blockquote>
 <p>即将图像真实灰度为$[Z_k,Z_{k+1}]$的点，用离散量化值$q_k$代替，$p(Z)$事先已知，求$Z_i,i\in[i,K+1],q_i,i\in[1,K]$,令均方误差最小</p>
 </blockquote>
 </li>
 <li><p>优化问题：</p>
 <ul>
-<li>$$<br>min_{z_1,…,Z_{k+1},q_1,…,q_K}\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q_k)^2p(Z)d(Z)<br>$$</li>
+<li><script type="math/tex; mode=display">
+min_{z_1,...,Z_{k+1},q_1,...,q_K}\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q_k)^2p(Z)d(Z)</script></li>
 </ul>
 </li>
 </ul>
@@ -444,7 +435,6 @@
 </li>
 </ul>
 <img src="/2020/09/16/DIP-Lecture2/Prefer.png" class="">
-
 <pre><code>  - 使用邻近像素作为赋值
   - 将4\*4的图片和5\*5的图片化为相同图像大小，然后旋转4\*4图片中最近的点作为5\*5图片中的点。
 
@@ -452,18 +442,11 @@
 
 - 双线性内插：
 
-  - 由相邻象个像素点的灰度值加权的到</code></pre>
-<img src="/2020/09/16/DIP-Lecture2/linear1.png" class="">
-
+  - 由相邻象个像素点的灰度值加权的到
+</code></pre><img src="/2020/09/16/DIP-Lecture2/linear1.png" class="">
 <img src="/2020/09/16/DIP-Lecture2/linnear2.png" class="">
-
-<pre><code>  - 拓展到二位：做3次双线性内插</code></pre>
-
-
-
-
-
-
+<pre><code>  - 拓展到二位：做3次双线性内插
+</code></pre>
 <p>  ​</p>
 
     </div>
@@ -662,6 +645,8 @@
 
 
 
+
+  
 
   
 

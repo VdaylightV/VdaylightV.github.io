@@ -232,7 +232,6 @@
         <h1 id="Class4-Opening-the-Box-Model"><a href="#Class4-Opening-the-Box-Model" class="headerlink" title="#Class4-Opening the Box Model"></a>#Class4-Opening the Box Model</h1><h3 id="Display"><a href="#Display" class="headerlink" title="Display"></a>Display</h3><ul>
 <li><p>How the elements are displayed is determined by their <code>display</code> property, including <code>block</code>,<code>inline</code>,<code>inline-block</code> and <code>none</code>.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;block-level element&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;inline-level element&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;behave as a block-level element, however not begin on a new line&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none;</span><br><span class="line">&#125;</span><br><span class="line">&#x27;&#x27;&#x27;the element does not display&#x27;&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
 </li>
 </ul>
 <h3 id="Box-Model"><a href="#Box-Model" class="headerlink" title="Box Model"></a>Box Model</h3><ul>
@@ -251,7 +250,6 @@
 <li><p>The calculation of the total width  or height:</p>
 <p>$margin*2 + border*2+padding*2+width/height$</p>
 <img src="/2020/09/02/Class4-Opening-the-Box-Model/box-model.png" class="">
-
 </li>
 </ul>
 <h5 id="Some-Tips"><a href="#Some-Tips" class="headerlink" title="Some Tips:"></a>Some Tips:</h5><ul>
@@ -260,26 +258,21 @@
 </li>
 <li><p>The <strong>padding and margin</strong> both leave some blank space. The padding is affiliated to the element itself and shares the background with the element, while the margin is affiliated to the parental element of the element and shares the background with the parent’s background.</p>
 </li>
-<li><p>The <strong>margins</strong> only work horizontally—<code>left</code> and <code>right</code> on <strong>inline-level elements</strong>. Meanwhile, the <strong>paddings</strong> work on all sides of inline-level elements. Both of them work normally on non-inline elements.</p>
+<li><p>The <strong>margins</strong> only work horizontally—-<code>left</code> and <code>right</code> on <strong>inline-level elements</strong>. Meanwhile, the <strong>paddings</strong> work on all sides of inline-level elements. Both of them work normally on non-inline elements.</p>
 </li>
 <li><p>Some ways to declare margin or padding.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&#x27;&#x27;&#x27;shorthand form:&#x27;&#x27;&#x27;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">20px</span>;</span><br><span class="line">&#125; &#x27;&#x27;&#x27;define the same value for all four sides of an element&#x27;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">20px</span>;</span><br><span class="line">&#125; &#x27;&#x27;&#x27;the first value is for top and bottom and the second value is for left and right&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">15px</span>;</span><br><span class="line">&#125; &#x27;&#x27;&#x27;The four values are for top, right, bottom, left respectively&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;longhand form:&#x27;&#x27;&#x27;</span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">6px</span>;</span><br><span class="line">&#125; &#x27;&#x27;&#x27;We can specify the value of the specific side &#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>The <strong>borders</strong> have similar properties. However, the have the properties of  styles(<code>solide</code>, <code>dashed</code>, <code>dotted</code>, <code>none</code>) and colors(e.g. #949599).</p>
 <img src="/2020/09/02/Class4-Opening-the-Box-Model/border.png" class="">
-
 </li>
 </ul>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">6px</span> solid <span class="number">#949599</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border-bottom-width</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>We can also round the corners of the border:</li>
 </ul>
 <img src="/2020/09/02/Class4-Opening-the-Box-Model/round.png" class="">
-
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">border-top-right-radius</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li><p>There are also some ways for us to redefine the calculation of our  box model, which is called <code>box-sizing</code>.</p>
 <ul>
@@ -292,10 +285,6 @@
 </li>
 </ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">-webkit-box-sizing</span>: content-box;</span><br><span class="line">     <span class="attribute">-moz-box-sizing</span>: content-box;</span><br><span class="line">          <span class="attribute">box-sizing</span>: content-box;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x27;&#x27;&#x27;Mozilla Firefox: -moz-&#x27;&#x27;&#x27;</span><br><span class="line">&#x27;&#x27;&#x27;Microsoft Internet Explorer: -ms-&#x27;&#x27;&#x27;</span><br><span class="line">&#x27;&#x27;&#x27;Webkit (Google Chrome and Apple Safari): -webkit-&#x27;&#x27;&#x27;</span><br></pre></td></tr></table></figure>
-
-
-
-
 </li>
 </ul>
 
@@ -495,6 +484,8 @@
 
 
 
+
+  
 
   
 
