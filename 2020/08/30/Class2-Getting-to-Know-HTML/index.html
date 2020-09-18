@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="#Class2:Getting to Know HTMLBasic SemanticsOverviewSemantics: The semantics in HTML gives the content of the page meaning of defines the structure of the page.  Divisions &amp; SpansCommons: &lt;div&amp;g">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Class2:Getting to Know HTML">
+<meta property="og:url" content="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#Class2:Getting to Know HTMLBasic SemanticsOverviewSemantics: The semantics in HTML gives the content of the page meaning of defines the structure of the page.  Divisions &amp; SpansCommons: &lt;div&amp;g">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/1.png">
+<meta property="article:published_time" content="2020-08-30T09:11:04.000Z">
+<meta property="article:modified_time" content="2020-08-30T09:16:51.420Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="HTML&amp;CSS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/1.png">
+
+<link rel="canonical" href="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Class2:Getting to Know HTML | Hexo</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/30/Class2-Getting-to-Know-HTML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Class2:Getting to Know HTML
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-08-30 17:11:04 / Modified: 17:16:51" itemprop="dateCreated datePublished" datetime="2020-08-30T17:11:04+08:00">2020-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Class2-Getting-to-Know-HTML"><a href="#Class2-Getting-to-Know-HTML" class="headerlink" title="#Class2:Getting to Know HTML"></a>#Class2:Getting to Know HTML</h1><h2 id="Basic-Semantics"><a href="#Basic-Semantics" class="headerlink" title="Basic Semantics"></a>Basic Semantics</h2><h3 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h3><h4 id="Semantics"><a href="#Semantics" class="headerlink" title="Semantics:"></a>Semantics:</h4><ul>
+<li>The semantics in HTML gives the content of the page meaning of defines the structure of the page.</li>
+</ul>
+<h3 id="Divisions-amp-Spans"><a href="#Divisions-amp-Spans" class="headerlink" title="Divisions &amp; Spans"></a>Divisions &amp; Spans</h3><h4 id="Commons"><a href="#Commons" class="headerlink" title="Commons:"></a>Commons:</h4><ul>
+<li><code>&lt;div&gt;</code>s <code>&lt;span&gt;</code>s are both generic containers which has no overarching meaning.</li>
+<li><code>&lt;div&gt;</code>s <code>&lt;span&gt;</code>s are often used to apply targeted styles to a contained set of content.</li>
+</ul>
+<h4 id="Differences"><a href="#Differences" class="headerlink" title="Differences:"></a>Differences:</h4><ul>
+<li>A <code>&lt;div&gt;</code> is a block-level element that is commonly used to identify large groupings of content, and which helps to build a web page’s layout and design.</li>
+<li>A <code>&lt;span&gt;</code>, on the other hand, is an inline-level element commonly used to identify smaller groupings of text within a block-level element.</li>
+</ul>
+<h4 id="Block-vs-Inline-Elements"><a href="#Block-vs-Inline-Elements" class="headerlink" title="Block vs. Inline Elements"></a>Block vs. Inline Elements</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Division --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;social&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>I may be found on...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>Additionally, I have a profile on...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Block Element--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Span --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Soon we&#x27;ll be <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;tooltip&quot;</span>&gt;</span>writing HTML<span class="tag">&lt;/<span class="name">span</span>&gt;</span> with the best of them.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- Inline Element--&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Headings"><a href="#Headings" class="headerlink" title="Headings"></a>Headings</h3><ul>
+<li><p>Headings are block-level elements which have six different ranks:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Heading Level 1<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Heading Level 2<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>Heading Level 3<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h4</span>&gt;</span>Heading Level 4<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h5</span>&gt;</span>Heading Level 5<span class="tag">&lt;/<span class="name">h5</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h6</span>&gt;</span>Heading Level 6<span class="tag">&lt;/<span class="name">h6</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>This ranks shows the order of the content and their relevance.</p>
+</li>
+</ul>
+<h3 id="Paragraphs"><a href="#Paragraphs" class="headerlink" title="Paragraphs"></a>Paragraphs</h3><ul>
+<li><p>Paragraphs are block-level elements which store some information of the website.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Steve Jobs ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>In his address ...<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="Text-Bold"><a href="#Text-Bold" class="headerlink" title="Text: Bold"></a>Text: Bold</h3><h4 id="Two-ways"><a href="#Two-ways" class="headerlink" title="Two ways:"></a>Two ways:</h4><ul>
+<li><code>&lt;strong&gt;</code>: makes text bold and place a strong importance on it.</li>
+<li><code>&lt;b&gt;</code>: just makes the text bold to show them in a different style —— stylistically offset, with no intent to draw intention.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Strong importance --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>Caution:<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> Falling rocks.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Stylistically offset --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>This recipe calls for <span class="tag">&lt;<span class="name">b</span>&gt;</span>bacon<span class="tag">&lt;/<span class="name">b</span>&gt;</span> and <span class="tag">&lt;<span class="name">b</span>&gt;</span>baconnaise<span class="tag">&lt;/<span class="name">b</span>&gt;</span>.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Text-Italicize"><a href="#Text-Italicize" class="headerlink" title="Text: Italicize"></a>Text: Italicize</h3><h4 id="Two-ways-1"><a href="#Two-ways-1" class="headerlink" title="Two ways:"></a>Two ways:</h4><ul>
+<li><p><code>&lt;em&gt;</code>: is used to place a stressed emphasize on text.</p>
+</li>
+<li><p><code>&lt;i&gt;</code>: is used to convey text in an alternative voice or tone.</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Stressed emphasis --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>I <span class="tag">&lt;<span class="name">em</span>&gt;</span>love<span class="tag">&lt;/<span class="name">em</span>&gt;</span> Chicago!<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Alternative voice or tone --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>The name <span class="tag">&lt;<span class="name">i</span>&gt;</span>Shay<span class="tag">&lt;/<span class="name">i</span>&gt;</span> means a gift.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Building-Structure"><a href="#Building-Structure" class="headerlink" title="Building Structure"></a>Building Structure</h2><h3 id="Overview-1"><a href="#Overview-1" class="headerlink" title="Overview"></a>Overview</h3><h4 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5:"></a>HTML5:</h4><ul>
+<li>HTML5 introduced some new structurally based elements, which can give meaning to the organization of our pages and improve its structural semantics.</li>
+</ul>
+<img src="/2020/08/30/Class2-Getting-to-Know-HTML/1.png" class="">
+
+<h3 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h3><ul>
+<li><code>&lt;header&gt;</code>: is used to identify the top of a page, article, section, or other segment of a page.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>...<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>This part can contain introductory text, even navigation menu.</li>
+</ul>
+<h4 id="Confusion-Tips"><a href="#Confusion-Tips" class="headerlink" title="Confusion Tips:"></a>Confusion Tips:</h4><ul>
+<li><code>&lt;header&gt;</code>: a structural element which outlines the heading of a segment of a page.</li>
+<li><code>&lt;head&gt;</code>: this element not display on a page and is used to outline metadata.</li>
+<li><code>&lt;h1&gt;</code>: is used to designate multiple levels of text headings throughout a page.</li>
+</ul>
+<h3 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h3><ul>
+<li><code>&lt;nav&gt;</code>: is used to identifies a section of major navigational links on a page.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span>...<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>These links include links to other pages within this website or to parts of the same web page.</li>
+</ul>
+<h3 id="Article"><a href="#Article" class="headerlink" title="Article"></a>Article</h3><ul>
+<li><code>&lt;article&gt;</code>: is used to identify a section of independent, self-contained element.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>...<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Section"><a href="#Section" class="headerlink" title="Section"></a>Section</h3><ul>
+<li><code>&lt;section&gt;</code>: is used to identify a thematic grouping of content.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">section</span>&gt;</span>...<span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>This element is often used to break up the whole page and provide hierarchy. In addition, this element always contains a heading</li>
+</ul>
+<h3 id="Aside"><a href="#Aside" class="headerlink" title="Aside"></a>Aside</h3><ul>
+<li><code>&lt;aside&gt;</code>: is used to hold contents, such as sidebars or brief explanations.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">aside</span>&gt;</span>...<span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>This element is often used to identify content related to the article, such as author etc.</li>
+</ul>
+<h3 id="Footer"><a href="#Footer" class="headerlink" title="Footer"></a>Footer</h3><ul>
+<li><code>&lt;footer&gt;</code>: is used to identify the closing or end of a page, article or section.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">footer</span>&gt;</span>...<span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Encoding-Special-Characters"><a href="#Encoding-Special-Characters" class="headerlink" title="Encoding Special Characters:"></a>Encoding Special Characters:</h4><p><code>&amp;ndash</code>, <code>&amp;mdash</code>, <code>&amp;copy</code>: this are special characters in HTML, and those are how they are encoded.</p>
+<h2 id="Hyperlinks"><a href="#Hyperlinks" class="headerlink" title="Hyperlinks"></a>Hyperlinks</h2><h3 id="Overview-2"><a href="#Overview-2" class="headerlink" title="Overview"></a>Overview</h3><ul>
+<li><p>The hyperlinks facilitate the website to provide link which can link to many other websites or other pages or parts within this website.</p>
+</li>
+<li><p><code>&lt;a href=&quot;...&quot;&gt;</code>: is used to create hyperlink which is a inline-level element.</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://bing.com&quot;</span>&gt;</span>Shay<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Relative-amp-Absolute-Paths"><a href="#Relative-amp-Absolute-Paths" class="headerlink" title="Relative &amp; Absolute Paths:"></a>Relative &amp; Absolute Paths:</h4><ul>
+<li><strong>Relative Paths</strong>: If the link links to other pages of the same website, we can use relative paths in <code>href</code>.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Relative Path --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;about.html&quot;</span>&gt;</span>About<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Absolute Paths</strong>: If the link links to other website, we should use  absolute paths in <code>href</code>.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Absolute Path --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://www.google.com/&quot;</span>&gt;</span>Google<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Linking-to-an-Email-Address"><a href="#Linking-to-an-Email-Address" class="headerlink" title="Linking to an Email Address:"></a>Linking to an Email Address:</h4><ul>
+<li><strong>Email Link</strong>: can open the email client and write to the given email address.</li>
+<li>The format looks like this:</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;mailto:shay@awesome.com?subject=Reaching%20Out&amp;body=How%20are%20you&quot;</span>&gt;</span>Email Me<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>mailto</code>: we add the target address here.</li>
+<li><code>subject</code>: we add our title of the email here.</li>
+<li><code>body</code>: we add our content of the email here.</li>
+<li><strong>Remark</strong>: <code>%20</code>: means space, <code>%0A</code>: means line break</li>
+</ul>
+<h4 id="Open-Links-in-a-New-Window"><a href="#Open-Links-in-a-New-Window" class="headerlink" title="Open Links in a New Window"></a>Open Links in a New Window</h4><ul>
+<li>Just add <code>target=&quot;_blank&quot;</code> in the <code>&lt;a&gt;</code>.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://shayhowe.com/&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>Shay Howe<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Linking-to-Parts-of-the-Same-Page"><a href="#Linking-to-Parts-of-the-Same-Page" class="headerlink" title="Linking to Parts of the Same Page"></a>Linking to Parts of the Same Page</h4><ul>
+<li><code>Back to Top</code> Button: Just add <code>id=&quot;top&quot;</code> to the target part and set <code>href=&quot;#top&quot;</code>.</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">id</span>=<span class="string">&quot;top&quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#top&quot;</span>&gt;</span>Back to top<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/HTML-CSS/" rel="tag"># HTML&CSS</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/08/29/about/index/" rel="prev" title="about">
+      <i class="fa fa-chevron-left"></i> about
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/08/31/Class3-Getting-to-Know-CSS/" rel="next" title="Class3:Getting to Know CSS">
+      Class3:Getting to Know CSS <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Class2-Getting-to-Know-HTML"><span class="nav-number">1.</span> <span class="nav-text">#Class2:Getting to Know HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-Semantics"><span class="nav-number">1.1.</span> <span class="nav-text">Basic Semantics</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview"><span class="nav-number">1.1.1.</span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Semantics"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Semantics:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Divisions-amp-Spans"><span class="nav-number">1.1.2.</span> <span class="nav-text">Divisions &amp; Spans</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Commons"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">Commons:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Differences"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">Differences:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Block-vs-Inline-Elements"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">Block vs. Inline Elements</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Headings"><span class="nav-number">1.1.3.</span> <span class="nav-text">Headings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Paragraphs"><span class="nav-number">1.1.4.</span> <span class="nav-text">Paragraphs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-Bold"><span class="nav-number">1.1.5.</span> <span class="nav-text">Text: Bold</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-ways"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">Two ways:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-Italicize"><span class="nav-number">1.1.6.</span> <span class="nav-text">Text: Italicize</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Two-ways-1"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">Two ways:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-Structure"><span class="nav-number">1.2.</span> <span class="nav-text">Building Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#HTML5"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">HTML5:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Header"><span class="nav-number">1.2.2.</span> <span class="nav-text">Header</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Confusion-Tips"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Confusion Tips:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Navigation"><span class="nav-number">1.2.3.</span> <span class="nav-text">Navigation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Article"><span class="nav-number">1.2.4.</span> <span class="nav-text">Article</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Section"><span class="nav-number">1.2.5.</span> <span class="nav-text">Section</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Aside"><span class="nav-number">1.2.6.</span> <span class="nav-text">Aside</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Footer"><span class="nav-number">1.2.7.</span> <span class="nav-text">Footer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Encoding-Special-Characters"><span class="nav-number">1.2.7.1.</span> <span class="nav-text">Encoding Special Characters:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hyperlinks"><span class="nav-number">1.3.</span> <span class="nav-text">Hyperlinks</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Overview-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Overview</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Relative-amp-Absolute-Paths"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">Relative &amp; Absolute Paths:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linking-to-an-Email-Address"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">Linking to an Email Address:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Open-Links-in-a-New-Window"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">Open Links in a New Window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linking-to-Parts-of-the-Same-Page"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">Linking to Parts of the Same Page</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">John Doe</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
