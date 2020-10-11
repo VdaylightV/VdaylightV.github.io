@@ -189,6 +189,150 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/02/Dynamic-Programming-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Tou.png">
+      <meta itemprop="name" content="Nector Gan">
+      <meta itemprop="description" content="Propose, propoes, try and try!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Psyche Zone">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/02/Dynamic-Programming-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">Dynamic Programming:动态规划</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-09-02 16:51:52 / Modified: 16:53:03" itemprop="dateCreated datePublished" datetime="2020-09-02T16:51:52+08:00">2020-09-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>1 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Dynamic-Programming-动态规划"><a href="#Dynamic-Programming-动态规划" class="headerlink" title="#Dynamic Programming:动态规划"></a>#Dynamic Programming:动态规划</h1><h4 id="动态规划问题概述："><a href="#动态规划问题概述：" class="headerlink" title="动态规划问题概述："></a>动态规划问题概述：</h4><ul>
+<li>动态规划用于<strong>在约束条件下</strong>找到问题的最优解，其思路为<strong>首先解决子问题，再逐步解决大问题</strong>。</li>
+<li>能用动态规划求解问题的前提是：<strong>每个子问题</strong>都是<strong>独立且离散</strong>的，<strong>不能存在依赖关系</strong></li>
+<li>每种动态规划解决方案都涉及<strong>网络</strong>，网络的<strong>单元格中的值</strong>通常就是<strong>需要优化的值</strong>。</li>
+<li>每个<strong>单元格</strong>都是问题的<strong>子问题</strong>，<u>可通过将问题分解为子问题来考虑网络的坐标轴。</u></li>
+</ul>
+<h4 id="背包问题："><a href="#背包问题：" class="headerlink" title="背包问题："></a>背包问题：</h4><ul>
+<li><p><strong>问题描述</strong>：小偷的背包可装下4磅物品，现有如下三样物品可供盗窃</p>
+<ul>
+<li>音响(S)：$3000, 4磅</li>
+<li>笔记本电脑(L)：$2000, 3磅</li>
+<li>吉他(G)：$1500, 1磅</li>
+</ul>
+</li>
+<li><p><strong>问题解决</strong>：</p>
+<ul>
+<li><p>构建网络，横坐标为背包容量（1磅到4磅）,纵坐标为商品。</p>
+</li>
+<li><p>按行填充网络</p>
+<p>|         | 1       | 2       | 3       | 4            |<br>| ———- | ———- | ———- | ———- | —————— |<br>| 吉他(G) | $1500 G | $1500 G | $1500 G | $1500 G      |<br>| 音响(S) | $1500 G | $1500 G | $1500 G | $3000 S      |<br>| 笔电(L) | $1500 G | $1500 G | $2000 L | <strong>$3500 LG</strong> |</p>
+</li>
+<li><p><strong>单元格计算方法</strong>：Max(上一个单元格的值, 装入当前商品的价值+剩余空间的价值)</p>
+</li>
+<li><p>由网格得出最优解为<strong>电脑+吉他</strong>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="动态规划网络的特点及要求："><a href="#动态规划网络的特点及要求：" class="headerlink" title="动态规划网络的特点及要求："></a>动态规划网络的特点及要求：</h4><ul>
+<li>行的排列顺序不影响最终结果。</li>
+<li>若对于可取走一部分的商品，如大米，豆类等散称物品，动态规划无法求解（<u>贪婪算法可求解</u>）。</li>
+<li>横坐标中子背包的容量粒度取决于质量最小的商品。</li>
+</ul>
+<h4 id="最长公子串问题："><a href="#最长公子串问题：" class="headerlink" title="最长公子串问题："></a>最长公子串问题：</h4><ul>
+<li><p><strong>问题描述：</strong>求解两个序列中最长的连续子串。</p>
+</li>
+<li><p><strong>问题解决</strong>：</p>
+<ul>
+<li><p><strong>网格坐标</strong>：分别为两个子串</p>
+</li>
+<li><p><strong>单元格计算</strong>：若单元格所在横纵坐标的子串相同，则单元格值为右上角单元格值加1，否则为0。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> word_a[i] == word_b[j]:</span><br><span class="line">    cell[i][j] = cell[i<span class="number">-1</span>][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    cell[i][j] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>结果：</strong>最长子串长度为网格所有单元格值中的最大值。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="最长公共子序列问题："><a href="#最长公共子序列问题：" class="headerlink" title="最长公共子序列问题："></a>最长公共子序列问题：</h4><ul>
+<li><p><strong>问题描述：</strong>求解两个序列中的最长公共子序列（<u>除去了连续的要求</u>）</p>
+</li>
+<li><p><strong>问题解决</strong>：</p>
+<ul>
+<li><p><strong>网格坐标</strong>：分别为两个子串</p>
+</li>
+<li><p><strong>单元格计算</strong>：若单元格所在横纵坐标的子串相同，则单元格值为右上角单元格值加1，否则为该单元格左边和上边单元格值中较大的那一个。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> word_a[i] == word_b[j]:</span><br><span class="line">    cell[i][j] = cell[i<span class="number">-1</span>][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    cell[i][j] = max(cell[i<span class="number">-1</span>][j], cell[i][j<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>结果：</strong>最长公共子序列长度为网格所有单元格值中的最大值。</p>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/02/Class4-Opening-the-Box-Model/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1433,88 +1577,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/08/04/The-things-haunted-with-me/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Tou.png">
-      <meta itemprop="name" content="Nector Gan">
-      <meta itemprop="description" content="Propose, propoes, try and try!">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Psyche Zone">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/04/The-things-haunted-with-me/" class="post-title-link" itemprop="url">The things haunted with me</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-08-04 21:30:14 / Modified: 22:09:48" itemprop="dateCreated datePublished" datetime="2020-08-04T21:30:14+08:00">2020-08-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mind-and-Thoughts/" itemprop="url" rel="index"><span itemprop="name">Mind and Thoughts</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>714</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="The-things-haunted-with-me"><a href="#The-things-haunted-with-me" class="headerlink" title="The things haunted with me"></a>The things haunted with me</h4><p> Wxf R jv jc bnj frcqxdc cqn pxju cx lqjbn. Fqjc rb fxabn rb cqjc R ljw’c qjwmun vh ldaanwc cjbtb fnuu! Jb cqn orwju ngjvb jyyaxlqnb, R ojru cx vjwjpn vh crvn noonlcrenuh cx mnju frcq juu xo cqnv, unc juxwn bxvn xcqna carerju vjccnab jwm cqn lxdabnb rw bdvvna ljvydb! Jb j anbduc R jv rw uxf byrarcb jwm fxwmnarwp fqjc R jv mxrwp wxf , fqjc R jv pxxm jc jwm fqjc R jv ydabdrwp! Qxfnena，R ljw’c orwm cqn jwbfna! Rc’b anjuuh bjm jwm R mxw’c twxf qxf cx kanjt xdc xo cqrb bcajwpn ixwn! R fjwc cx cah vh knbc cx unjaw yaxonbbrxwju lxdabnb fnuu, kdc mdn cx vh yxxa crvn vjwjpnvnwc jwm ujlt xo bcdmh noonlcrenwnbb, R ljw’c jllxvyurbq vh pxju! Wxf rc bnnvb cqjc nenahcqrwp rb jc j vnbb jwm R fruu ojru bxvn lxdabnb fqrlq fruu mnyaren vn xo cqn nwcrunvnwc xo odacqna vh bcdmh jb j pajmdjcn frcqxdc cqn ngjvrwjcrxw! Cqn odcdan rb mxxvh jwm mnbynajcn! Qxyn Pxm Kunbb vn!</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1586,20 +1648,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1638,12 +1700,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">40k</span>
+    <span title="Symbols count total">44k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">36 mins.</span>
+    <span title="Reading time total">40 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>

@@ -189,6 +189,337 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/11/Optimization-Methods-Notes1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Tou.png">
+      <meta itemprop="name" content="Nector Gan">
+      <meta itemprop="description" content="Propose, propoes, try and try!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Psyche Zone">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/10/11/Optimization-Methods-Notes1/" class="post-title-link" itemprop="url">Optimization Methods Notes1</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-10-11 15:02:30 / Modified: 15:03:37" itemprop="dateCreated datePublished" datetime="2020-10-11T15:02:30+08:00">2020-10-11</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mathematics/" itemprop="url" rel="index"><span itemprop="name">Mathematics</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>4.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>4 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Optimization-Methods-——Notes-1"><a href="#Optimization-Methods-——Notes-1" class="headerlink" title="[Optimization Methods]——Notes 1"></a>[Optimization Methods]——Notes 1</h1><h2 id="数学补充——分析"><a href="#数学补充——分析" class="headerlink" title="数学补充——分析"></a>数学补充——分析</h2><ul>
+<li>内部：对于$x\in C\subset \R^n$,若存在$\epsilon&gt;0$满足:$\{y|~||y-x||_2 \le \epsilon\}\subset C$,称$x$为$C$的内点，$C$的所有内点组成$C$的内部，记为<strong>int</strong> C</li>
+<li>开集：若<strong>int</strong> C = C,则称C为开集</li>
+<li>闭集：若$C\subset \R^n$的补集$R^n$  $C$ = $\{x\in\R|x\notin C\}$是开集，则称$C$为闭集</li>
+<li>闭包：集合$C$的闭包定义为：<strong>cl</strong> C = $\R^n$  <strong>int</strong>($\R^n$  C)——$C$的补集的内部的补集</li>
+</ul>
+<blockquote>
+<p>点$x$属于$C$的条件为：对与每一个$\epsilon&gt;0, \exist y \in C$满足$||x-y||_2 \le \epsilon$</p>
+<p>利用收敛序列和极限点的观点：</p>
+<ul>
+<li>集合$C$是闭集$\iff$它包含它的每个收敛序列的极限点</li>
+<li>$C$的闭包是$C$的所有收敛序列的极限点组成的集合</li>
+</ul>
+</blockquote>
+<ul>
+<li>边界：<strong>bd</strong> C = <strong>cl</strong> C  <strong>int</strong> C</li>
+</ul>
+<blockquote>
+<p>边界点$x$的性质：</p>
+<ul>
+<li>对所有$\epsilon &gt; 0$,存在$y\in C$和$z\notin C$满足$||y-x||_2\le\epsilon,||z-x||_2\le \epsilon$</li>
+</ul>
+<p>集合$C$是闭集的条件为：<strong>bd</strong> C $\subset C$</p>
+<p>集合$C$是开集的条件为：$C \bigcap$ <strong>bd</strong> C = $\emptyset$</p>
+</blockquote>
+<h2 id="仿射集合"><a href="#仿射集合" class="headerlink" title="仿射集合"></a>仿射集合</h2><ul>
+<li>若通过集合C中的任意两点的直线仍然在集合C中，则称集合C是仿射的。</li>
+</ul>
+<script type="math/tex; mode=display">
+\forall x_1,x_2\in C,\theta\in \R,有\theta x_1+(1-\theta)x_2\in C</script><blockquote>
+<p>仿射组合：$\theta_1+…+\theta_k = 1$,$\theta_1x_1+…+\theta_kx_k$称为$x_1…x_k$的仿射组合。</p>
+<p>线性方程组的解集是一个仿射集合，$C=\{x|Ax=b\}$,与仿射集合C相关联的子空间就是A的零空间</p>
+<ul>
+<li>零空间：算子$A$的零空间是$Av = 0$的所有解$v$的集合</li>
+</ul>
+</blockquote>
+<ul>
+<li>子空间：C是仿射集合且$x_0\in C$,则集合$V=C-x_0=\{x-x_0|x\in C\}$,是一个子空间，关于加法和数乘封闭。</li>
+</ul>
+<blockquote>
+<p>同理：仿射集合C可以表示为：$C=V+x_0=\{v+x_0|v\in V\}$</p>
+</blockquote>
+<ul>
+<li>仿射包：集合$C\subset R^n$中的点的所有仿射组合组成的集合称为$C$的仿射包，即为<strong>aff</strong> C</li>
+</ul>
+<blockquote>
+<p><strong>aff</strong> C = $\{\theta_1x_1+…+\theta_kx_k|x_1,…,x_k \in C, \theta_1+…+\theta_k=1\}$</p>
+<ul>
+<li>仿射包是包含$C$的最小仿射集合。</li>
+</ul>
+</blockquote>
+<ul>
+<li>相对内部：集合$C$的相对内部为它相对于<strong>aff</strong> C的内部，记为<strong>relint</strong> C，即：<strong>relint</strong> C = $\{x\in C|B(x,r)\bigcap$<strong>aff</strong> C $\subset C$ 对于某些$r&gt;0\}$</li>
+<li>相对边界：<strong>cl</strong> C  <strong>relint</strong> C——集合$C$的闭包除去集合$C$的相对边界</li>
+</ul>
+<h2 id="凸集"><a href="#凸集" class="headerlink" title="凸集"></a>凸集</h2><ul>
+<li>凸集：集合$C$被称为凸集$\iff<script type="math/tex">C$中的任意两点间的线段仍然在$C$中$\iff</script>\forall x_1,x_2\in C$和满足$0\le \theta\le1$的$\theta$都有$\theta x_1+(1-\theta)x_2 \in C$</li>
+</ul>
+<blockquote>
+<p>仿射集合一定是凸集</p>
+<p>凸组合：$\theta_1x_1+…+\theta_kx_k$,为$x_1,…,x_k$的一个凸组合，其中$\theta_1+…+\theta_k=1$且$\theta_i \ge 0, i = 1,…,k$</p>
+<p>一个集合是凸集$\iff$集合包含其中所有点的凸组合</p>
+</blockquote>
+<ul>
+<li>凸包：集合$C$中所有的的凸组合的集合称为其凸包，记为<strong>conv</strong> C，</li>
+</ul>
+<blockquote>
+<p><strong>conv</strong> C = $\{\theta_1x_1+…+\theta_kx_k|x_i\in C,\theta_i\ge0, i = 1,…,k,\theta_1+…+\theta_k = 1\}$</p>
+<p>凸包<strong>conv</strong> C总是凸的，它是包含$C$的最小凸集</p>
+</blockquote>
+<h2 id="锥"><a href="#锥" class="headerlink" title="锥"></a>锥</h2><ul>
+<li>锥：若对任意$x\in C$和$\theta \ge 0$, 都有$\theta x \in C$,则将集合$C$称为锥或非负其次。</li>
+<li>凸锥：若$C$是锥且$C$是凸的，则称$C$为凸锥$\iff$ $\forall x_1,x_2\in C和\theta_1,\theta_2 \ge0,有\theta_1x_1+\theta_2x_2 \in C$</li>
+</ul>
+<blockquote>
+<p>锥组合（非负线性组合）：$\theta_1x_1+…+\theta_kx_k,\theta_1,…,\theta_k \ge 0$形式的点称为$x_1,…,x_k$的锥组合</p>
+<p>集合$C$是凸锥$\iff$它包含其元素的所有锥组合</p>
+</blockquote>
+<ul>
+<li>锥包：集合$C$的所有锥组合的集合：$\{\theta_1x_1+…+\theta_kx_k | x_i \in C, \theta_i \ge 0, i = 1,…,k\}$</li>
+</ul>
+<blockquote>
+<p>集合$C$的锥包是集合$C$的最小的凸锥</p>
+</blockquote>
+<h2 id="凸集的例子"><a href="#凸集的例子" class="headerlink" title="凸集的例子"></a>凸集的例子</h2><ul>
+<li>$\emptyset$、单点集$\{x_0\}$、全空间$\R^n$</li>
+<li>直线是仿射的，通过零点的直线是凸锥</li>
+<li>线段是凸的但不是仿射的</li>
+<li>射线：$\{x_0+\theta v|\theta \ge 0\}$ ，$v\ne 0$ 的集合是凸的，但不仿射；若$v=0$,则其是凸锥</li>
+<li>任意子空间是仿射的、凸锥</li>
+</ul>
+<blockquote>
+<ul>
+<li><p>群：一个集合和定义在该集合上的操作的组合若满足下列条件则称为群</p>
+<ul>
+<li><p>在该操作上的封闭性</p>
+</li>
+<li><p>操作的结合律</p>
+</li>
+<li><p>集合中存在不变元</p>
+</li>
+<li><p>集合中存在逆元</p>
+<blockquote>
+<p>若额外满足操作的交换律则称为<code>Abelian Group</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>向量空间：一个集合、定义在集合内部元素之间的操作和与定义在集合中元素与外部集合元素之间的操作组合（e.g. 内部：加法；外部：数乘）</p>
+<ul>
+<li><p>除去外部操作的得到的群是Abelian Group</p>
+</li>
+<li><p>对于外部操作满足分配律和结合律</p>
+</li>
+<li>对于外部操作也存在不变元</li>
+</ul>
+</li>
+<li><p>向量子空间：$V = (\cal V,+,·)$是向量空间，集合$\cal U \subset \cal V$且$\cal U \ne \emptyset$，$U=(\cal U,+,·)$称为$V$的向量子空间,记为$U\subset V$,如果以下条件满足：</p>
+<ul>
+<li>$U$关于$\cal U ×\cal U$、$\R × \cal U$封闭</li>
+<li>$0 \in \cal U$</li>
+</ul>
+</li>
+<li><p><u>关于子空间和向量空间的一些性质</u>：</p>
+<ul>
+<li>对任一向量空间$V$，其自身$V$和$\{0\}$都是其子空间</li>
+<li>子空间至少要包含零元($0$)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="超平面和半空间"><a href="#超平面和半空间" class="headerlink" title="超平面和半空间"></a>超平面和半空间</h2><ul>
+<li>超平面：具有如下形式的集合$\{x|a^Tx=b\}$,$a\in\R^n,a\ne 0,b\in \R$ $\iff$ $\{x|a^T(x-x_0)=0\} = x_0+a^{\bot}$,$x_0$为超平面上任意一点</li>
+</ul>
+<blockquote>
+<p>$a^{\bot}$表示$a$的正交补，即与$a$正交的向量的集合：$a^{\bot}=\{v|a^Tv=0\}$</p>
+<p>超平面由偏移$x_0$加上所有正交于法向量$a$的向量构成。</p>
+</blockquote>
+<ul>
+<li>半空间：一个超平面将$\R^n$划分为两个半空间：$\{x|a^Tx\le b\},a\ne 0\iff \{x|a^T(x-x_0)\le 0\}$,$x_0$是超平面上的任意一点。</li>
+</ul>
+<blockquote>
+<p>半空间是凸的但不是仿射的</p>
+<ul>
+<li>若半空间为$\{x|a^Tx\le b\}$<ul>
+<li>半空间的边界——超平面$\{x|a^Tx=b\}$</li>
+<li>半空间的内部——开半空间$\{x|a^Tx&lt;b\}$</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="球和椭球"><a href="#球和椭球" class="headerlink" title="球和椭球"></a>球和椭球</h2><ul>
+<li><p>球：</p>
+<p>$B(x_c,r)=\{x|~||x-x_c||_2\le r^2\} = \{x|(x-x_c)^T(x-x_c)\le r^2\} = \{x_c+ru~|~||u||_2\le 1\}$</p>
+</li>
+</ul>
+<blockquote>
+<p>$向量x_c$是球心，$标量r$是半径，$B(x_c,r)$表示所有距离$x_c$不超过$r$的所有点的集合</p>
+<p>球是凸集</p>
+</blockquote>
+<ul>
+<li>椭球：</li>
+</ul>
+<p>​     $\varepsilon = \{x|(x-x_c)^TP^{-1}(x-x_c)\le1\} = \{x_c+Au~|~||u||_2 \le 1\}$</p>
+<blockquote>
+<p>$x_c\in \R^n$是椭球中心，$P=P^T\succ 0$,即$P$是对称正定矩阵——决定了椭球从$x_c$向各个方向的拓展幅度,半轴长为$\sqrt\lambda_i$</p>
+<p>$\varepsilon = \{x_c+Au~|~||u||_2 \le 1\}$，其中可以假设$A=P^{\frac{1}{2}}$是对称正定的，当$A$为对称半正定矩阵，但奇异时，集合称为退化的椭球，仿射维数为$A$的秩。</p>
+<p>退化的椭球也是凸的</p>
+</blockquote>
+<h2 id="范数球和范数锥"><a href="#范数球和范数锥" class="headerlink" title="范数球和范数锥"></a>范数球和范数锥</h2><ul>
+<li><p>范数球：$\{x~|~||x-x_c|| \le r\}$</p>
+<blockquote>
+<p>范数球是凸的</p>
+</blockquote>
+</li>
+<li><p>范数锥：$C=\{(x,t)~|~||x||\le t $  \} $\subset \R^{n+1}$</p>
+<blockquote>
+<p>范数锥是一个凸锥</p>
+<ul>
+<li>二阶锥：</li>
+</ul>
+<p>$C=\{(x,t)\in \R^{n+1}|~||x||_2 \le t$}$\iff x^2-t^2 \le 0, t \ge 0$</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="多面体和单纯形"><a href="#多面体和单纯形" class="headerlink" title="多面体和单纯形"></a>多面体和单纯形</h2><ul>
+<li><p>多面体：$\cal P = \{x|a_j^Tx\le b_j\, j = 1,…,m,c_j^Tx=d_j,j=1,…,p\}$</p>
+<blockquote>
+<p>多面体对应有限个线性不等式和等式的解集</p>
+<p>一系列半空间和超平面的交集</p>
+<ul>
+<li><p>矩阵表示：</p>
+<p>$\cal P = \{x|Ax \preceq b, Cx = d\}$</p>
+<script type="math/tex; mode=display">A = \left[ \begin{matrix} a_1^T\\ ... \\ a_m^T \end{matrix} \right], C = \left[ \begin{matrix}c_1^T\\ ... \\ c_m^T \end{matrix} \right]</script></li>
+<li><p>$u \preceq v \iff \forall i,~ u_i \preceq v_i $</p>
+</li>
+</ul>
+</blockquote>
+</li>
+<li><p>单纯形：设$k+1$个点$v_0,….,v_k\in \R^n$仿射独立，那么这些点决定了一个单纯形：</p>
+<p>C = <strong>conv</strong> $\{v_0,…,v_k\}$=$\{\theta_0v_0+…+\theta_kv_k~|~\theta \succeq 0, 1^T\theta = 1\}$</p>
+<blockquote>
+<ul>
+<li>仿射独立：$k+1$个点$v_0,…,v_k\in \R^n$仿射独立，即，$v_1-v_0,…,v_k-v_0$线性独立</li>
+</ul>
+<p>单纯形是一类重要的多面体。</p>
+<ul>
+<li>上述单纯形的仿射维数为$k$,也成为$\R^n$空间的$k$维单纯形。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>常见的单纯形：</p>
+<ul>
+<li><p>一维单纯形——线段</p>
+</li>
+<li><p>二维单纯形——三角形及其内部</p>
+</li>
+<li><p>三维单纯形——四面体</p>
+</li>
+<li><p>单位单纯形：零向量$0$和单位向量$\epsilon_1,…\epsilon_n \in \R^n$决定的$n$维单纯形</p>
+<blockquote>
+<p>$x\succeq0, 1^Tx \le 1$</p>
+</blockquote>
+</li>
+<li><p>概率单纯形：单位向量$\epsilon_1,…\epsilon_n \in \R^n$决定的$n-1$维单纯形</p>
+<blockquote>
+<p>$x\succeq0,1^Tx=1$</p>
+<p>对应$n$个元素的集合的概率分布，$x_i$可理解为第$i$个元素的概率</p>
+<p>单纯形的紧凑表达：$x\in C \iff A_2x = A_2v_0 , y = A_1x-A_1v_0$满足$y\succeq 0$ 和$1^Ty \le 1$,即：</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<script type="math/tex; mode=display">
+A_2x=A_2x_0,A_1x\succeq A_1v_0, 1^TA_1x \le 1+ 1^TA_1v_0</script><ul>
+<li>半正定锥：</li>
+</ul>
+<p>​     集合$S^n_+$是一个凸锥$\iff$ 若$\theta_1,\theta_2 \ge 0$,且$A,B\in S^n_+$,有$\theta_1A+\theta_2B\in S^n_+$</p>
+<blockquote>
+<p>根据半正定的定义：$\forall x\in \R^n,若A\succeq0,B\succeq 0$，且$\theta_1,\theta_2 \ge 0$,有</p>
+<script type="math/tex; mode=display">
+x^T(\theta_1A+\theta_2B)x = \theta_1x^TAx+\theta_2x^TBx\ge 0</script><p>$S^n=\{X\in \R^{n×n}|X=X^T\}$——n×n的对称矩阵</p>
+<p>$S^n_+=\{X\in S^n|x\succeq 0\}$——半正定对称矩阵</p>
+<p>$S^n_{++} = \{X\in S^n|X\succeq0\}$——正定对称矩阵</p>
+<ul>
+<li>$S^2$上的半正定锥：</li>
+</ul>
+<script type="math/tex; mode=display">
+X =\left[ \begin{matrix} x & y\\  y & z \end{matrix} \right] \in S^2_+ \iff x \ge 0, z \ge 0, xz \ge y^2</script></blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/01/The-Log-of-Fourth-Week/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1634,150 +1965,6 @@ min_{z_1,...,Z_{k+1},q_1,...,q_K}\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/02/Dynamic-Programming-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Tou.png">
-      <meta itemprop="name" content="Nector Gan">
-      <meta itemprop="description" content="Propose, propoes, try and try!">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Psyche Zone">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/02/Dynamic-Programming-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" class="post-title-link" itemprop="url">Dynamic Programming:动态规划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-              
-
-              <time title="Created: 2020-09-02 16:51:52 / Modified: 16:53:03" itemprop="dateCreated datePublished" datetime="2020-09-02T16:51:52+08:00">2020-09-02</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Computer-Science/" itemprop="url" rel="index"><span itemprop="name">Computer Science</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="Symbols count in article">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="Reading time">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Dynamic-Programming-动态规划"><a href="#Dynamic-Programming-动态规划" class="headerlink" title="#Dynamic Programming:动态规划"></a>#Dynamic Programming:动态规划</h1><h4 id="动态规划问题概述："><a href="#动态规划问题概述：" class="headerlink" title="动态规划问题概述："></a>动态规划问题概述：</h4><ul>
-<li>动态规划用于<strong>在约束条件下</strong>找到问题的最优解，其思路为<strong>首先解决子问题，再逐步解决大问题</strong>。</li>
-<li>能用动态规划求解问题的前提是：<strong>每个子问题</strong>都是<strong>独立且离散</strong>的，<strong>不能存在依赖关系</strong></li>
-<li>每种动态规划解决方案都涉及<strong>网络</strong>，网络的<strong>单元格中的值</strong>通常就是<strong>需要优化的值</strong>。</li>
-<li>每个<strong>单元格</strong>都是问题的<strong>子问题</strong>，<u>可通过将问题分解为子问题来考虑网络的坐标轴。</u></li>
-</ul>
-<h4 id="背包问题："><a href="#背包问题：" class="headerlink" title="背包问题："></a>背包问题：</h4><ul>
-<li><p><strong>问题描述</strong>：小偷的背包可装下4磅物品，现有如下三样物品可供盗窃</p>
-<ul>
-<li>音响(S)：$3000, 4磅</li>
-<li>笔记本电脑(L)：$2000, 3磅</li>
-<li>吉他(G)：$1500, 1磅</li>
-</ul>
-</li>
-<li><p><strong>问题解决</strong>：</p>
-<ul>
-<li><p>构建网络，横坐标为背包容量（1磅到4磅）,纵坐标为商品。</p>
-</li>
-<li><p>按行填充网络</p>
-<p>|         | 1       | 2       | 3       | 4            |<br>| ———- | ———- | ———- | ———- | —————— |<br>| 吉他(G) | $1500 G | $1500 G | $1500 G | $1500 G      |<br>| 音响(S) | $1500 G | $1500 G | $1500 G | $3000 S      |<br>| 笔电(L) | $1500 G | $1500 G | $2000 L | <strong>$3500 LG</strong> |</p>
-</li>
-<li><p><strong>单元格计算方法</strong>：Max(上一个单元格的值, 装入当前商品的价值+剩余空间的价值)</p>
-</li>
-<li><p>由网格得出最优解为<strong>电脑+吉他</strong>。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="动态规划网络的特点及要求："><a href="#动态规划网络的特点及要求：" class="headerlink" title="动态规划网络的特点及要求："></a>动态规划网络的特点及要求：</h4><ul>
-<li>行的排列顺序不影响最终结果。</li>
-<li>若对于可取走一部分的商品，如大米，豆类等散称物品，动态规划无法求解（<u>贪婪算法可求解</u>）。</li>
-<li>横坐标中子背包的容量粒度取决于质量最小的商品。</li>
-</ul>
-<h4 id="最长公子串问题："><a href="#最长公子串问题：" class="headerlink" title="最长公子串问题："></a>最长公子串问题：</h4><ul>
-<li><p><strong>问题描述：</strong>求解两个序列中最长的连续子串。</p>
-</li>
-<li><p><strong>问题解决</strong>：</p>
-<ul>
-<li><p><strong>网格坐标</strong>：分别为两个子串</p>
-</li>
-<li><p><strong>单元格计算</strong>：若单元格所在横纵坐标的子串相同，则单元格值为右上角单元格值加1，否则为0。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> word_a[i] == word_b[j]:</span><br><span class="line">    cell[i][j] = cell[i<span class="number">-1</span>][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    cell[i][j] = <span class="number">0</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>结果：</strong>最长子串长度为网格所有单元格值中的最大值。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="最长公共子序列问题："><a href="#最长公共子序列问题：" class="headerlink" title="最长公共子序列问题："></a>最长公共子序列问题：</h4><ul>
-<li><p><strong>问题描述：</strong>求解两个序列中的最长公共子序列（<u>除去了连续的要求</u>）</p>
-</li>
-<li><p><strong>问题解决</strong>：</p>
-<ul>
-<li><p><strong>网格坐标</strong>：分别为两个子串</p>
-</li>
-<li><p><strong>单元格计算</strong>：若单元格所在横纵坐标的子串相同，则单元格值为右上角单元格值加1，否则为该单元格左边和上边单元格值中较大的那一个。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> word_a[i] == word_b[j]:</span><br><span class="line">    cell[i][j] = cell[i<span class="number">-1</span>][j<span class="number">-1</span>] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    cell[i][j] = max(cell[i<span class="number">-1</span>][j], cell[i][j<span class="number">-1</span>])</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>结果：</strong>最长公共子序列长度为网格所有单元格值中的最大值。</p>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1849,20 +2036,20 @@ min_{z_1,...,Z_{k+1},q_1,...,q_K}\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -1901,12 +2088,12 @@ min_{z_1,...,Z_{k+1},q_1,...,q_K}\delta^2=\sum_{k=1}^{K}\int_{Z_k}^{Z_{k+1}}(Z-q
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="Symbols count total">40k</span>
+    <span title="Symbols count total">44k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="Reading time total">36 mins.</span>
+    <span title="Reading time total">40 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
