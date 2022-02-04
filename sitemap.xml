@@ -4,7 +4,7 @@
   <url>
     <loc>http://example.com/2020/11/12/test-right/</loc>
     
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     
   </url>
   
@@ -270,7 +270,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -278,70 +278,70 @@
   
   <url>
     <loc>http://example.com/tags/algorithm/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/HTML-CSS/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Digital-Image-Process/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/MIT-cs231n/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/OS/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Optimization-Methods/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Log-Of-Week/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/Log-of-week/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/doubt-and-lost/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/%E5%8F%A4%E8%AF%97%E6%96%87/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -350,42 +350,42 @@
   
   <url>
     <loc>http://example.com/categories/Computer-Science/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Computer-Vision/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Mathematics/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Diary/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/Mind-and-Thoughts/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/%E9%98%85%E8%AF%BB/</loc>
-    <lastmod>2020-11-12</lastmod>
+    <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
