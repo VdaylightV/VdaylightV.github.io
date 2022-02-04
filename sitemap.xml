@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/02/04/A-Summary-and-A-New-Scheduler/</loc>
+    
+    <lastmod>2022-02-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2020/08/04/The-things-haunted-with-me/</loc>
+    
+    <lastmod>2022-02-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2020/11/12/test-right/</loc>
     
     <lastmod>2022-02-04</lastmod>
@@ -226,13 +240,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2020/08/04/The-things-haunted-with-me/</loc>
-    
-    <lastmod>2020-08-04</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/2020/05/18/categories/index/</loc>
     
     <lastmod>2020-07-31</lastmod>
@@ -275,6 +282,27 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://example.com/tags/Summary/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/2021/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/New-Year/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>http://example.com/tags/algorithm/</loc>
@@ -349,7 +377,21 @@
 
   
   <url>
+    <loc>http://example.com/categories/Scheduler/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/categories/Computer-Science/</loc>
+    <lastmod>2022-02-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/Scheduler/Summary/</loc>
     <lastmod>2022-02-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

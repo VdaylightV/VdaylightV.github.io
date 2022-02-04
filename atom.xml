@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-04T11:25:55.393Z</updated>
+  <updated>2022-02-04T12:25:52.820Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Summary and A New Scheduler For 2022</title>
+    <link href="http://example.com/2022/02/04/A-Summary-and-A-New-Scheduler/"/>
+    <id>http://example.com/2022/02/04/A-Summary-and-A-New-Scheduler/</id>
+    <published>2022-02-04T11:57:33.000Z</published>
+    <updated>2022-02-04T12:25:52.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>Now this is a new year when I should start the pursuing of master of Computer Science at NanWhere University. There have been a long time since I posted the last post in my personal blog. During this months, I have been doubted and haunted with many trivial matter. </p><p>Recently, I have decided to diving into my research area and will further my research to pursue my Phd. So I have decided to work hard to review the courses that I have not understand well and learn more courses as well as read more papers.</p><p>I will use this blog to schulde my life and record my learning and research!</p><p>Good Luck and Work Hard!</p><img src="/2022/02/04/A-Summary-and-A-New-Scheduler/R-C.jpg" class="" title="Work Hard!">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Now this is a new year when I should start the pursuing of master of Computer Science at NanWhere University. There have been a long time</summary>
+      
+    
+    
+    
+    <category term="Scheduler" scheme="http://example.com/categories/Scheduler/"/>
+    
+    <category term="Summary" scheme="http://example.com/categories/Scheduler/Summary/"/>
+    
+    
+    <category term="Summary" scheme="http://example.com/tags/Summary/"/>
+    
+    <category term="2021" scheme="http://example.com/tags/2021/"/>
+    
+    <category term="New Year" scheme="http://example.com/tags/New-Year/"/>
+    
+  </entry>
   
   <entry>
     <title>test_right</title>
@@ -448,27 +478,6 @@
     
     
     <category term="HTML&amp;CSS" scheme="http://example.com/tags/HTML-CSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>about</title>
-    <link href="http://example.com/2020/08/29/about/index/"/>
-    <id>http://example.com/2020/08/29/about/index/</id>
-    <published>2020-08-29T09:19:43.000Z</published>
-    <updated>2020-09-12T04:00:56.066Z</updated>
-    
-    <content type="html"><![CDATA[<p>I am a student majoring in Artificial Intelligence and Neuroscience. </p><p>To reflect on myself, record the knowledge and express the fragmented thoughts in my mind, I created this webseit and maintain it.</p><p>I hope one day I can become more adult, take on more responsibility and be equiped with the skills and competence to become the kind of person I am pursuing and live the life I wish for! Moreover, I hope one day I will meet the princess in my life!</p><p>In order to realize my dreams and goals, I need to dive into the professional courses, read more books and do more exercise!</p><img src="/2020/08/29/about/index/TomaTodo-Poster-3220.png" class="">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;I am a student majoring in Artificial Intelligence and Neuroscience. &lt;/p&gt;
-&lt;p&gt;To reflect on myself, record the knowledge and express the f</summary>
-      
-    
-    
-    
     
   </entry>
   
